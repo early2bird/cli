@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "pm": "./bin/src/pm"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"node ./dist/index.js\"",
     "build": "npx tsc",
     "lint": "eslint . --ext .ts",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "pm": "npm run build && node ./bin/src/pm",
+    "update": "node ./bin/src/pm update -f"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
