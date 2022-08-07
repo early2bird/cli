@@ -13,7 +13,9 @@
     "lint": "eslint . --ext .ts",
     "prepare": "husky install",
     "pm": "npm run build && node ./bin/src/pm",
-    "update": "node ./bin/src/pm update -f"
+    "update": "node ./bin/src/pm update -f",
+    "install": "node ./bin/src/pm install asdf ds -f",
+    "list": "node ./bin/src/pm list 1 2 3"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
